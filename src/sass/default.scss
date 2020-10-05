@@ -1,0 +1,11 @@
+@import 'template/template-default.scss';
+
+.wrap{
+	
+	@include desktop{
+		background-color: #f00;
+	}
+	@include laptop{
+		background-color: #0f0;
+	}
+}

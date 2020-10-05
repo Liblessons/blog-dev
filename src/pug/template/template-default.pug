@@ -1,0 +1,41 @@
+include ../common/mixins
+
+doctype
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+	title
+		| Блог разработчика
+	meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=2.0")
+
+	link(rel="stylesheet", href="css/default.css")
+body
+	.wrap
+		aside.wrap__left-block.left-block
+			.left-block__author-info.author-info
+				img.author-info__img(src="images/")
+				p.author-info__name
+					| Эммет Браун
+				p.author-info__developer
+					| Web-разработчик
+
+			nav.left-block__nav.nav
+				+navigation('nav', ['Главная', 'Блог', 'Контакты'], 1)
+
+		.wrap__content.content
+			article.article
+				h2.article__title
+					| Структура современного интернет-магазина Часть 1
+
+				+navigation('article-category', ['E-commerce','CMS','Администрирование'], -1)
+
+
+				.article__info.article-info
+					.article-info__date
+						| 21 октября, 2017
+					.article-info__comments
+						| 3 комментария
+
+		aside.wrap__right-block.right-block
+
+	include ../common/footer.pug

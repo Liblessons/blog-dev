@@ -1,0 +1,5 @@
+mixin navigation (className, items, activeItem)
+    ul(class=""+className+"__list")
+        each nav, ndx in items
+            li(class=""+className+"__item" + ( (ndx == activeItem) ? ' '+className+'__item_active' : '' ))
+                a(href="#" class=""+className+"__link")= nav

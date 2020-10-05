@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+@import '../common/reset.scss';
+@import '../common/var.scss';
+@import '../common/mixins.scss';
+
+
+
+html{
+	background-color: $color2;
+	font-family: 'Roboto', sans-serif;
+}
+
+.wrap{
+	@include wrap();
+}
+
+.left-block{
+	width: 20%;
+}
+.content{
+	width: 53%;
+	height: 500px;
+	background-color: #f00;
+}
+.right-block{
+	width: 25%;
+	height: 500px;
+	background-color: #0f0;
+}
+
+.nav{
+
+	&__list{
+		list-style: none;
+		padding:0px;
+	}
+	&__item{
+		&_active, &:hover{
+			background-color: $color1;
+		}
+	}
+	&__link{
+		padding:10px 5px;
+		display: block;
+		text-decoration: none;
+		color: $color3;
+	}
+
+	&__item_active, &__item:hover{
+
+		.nav__link{
+			color: $color2;
+		}
+	}
+}
+
+
+.footer-top__wrap, .footer-center__wrap, .footer-bottom__wrap{
+	@include wrap();
+}

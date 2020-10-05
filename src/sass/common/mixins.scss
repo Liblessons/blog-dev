@@ -1,0 +1,28 @@
+@mixin desktop {
+    @media screen and (max-width: $desktop) {
+         @content;
+    }
+}
+@mixin laptop {
+    @media screen and (max-width: $laptop) {
+        @content;
+    }
+}
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+@mixin phones {
+   @media screen and (max-width: $phones) {
+        @content;
+   }
+}
+ 
+
+@mixin wrap{
+  display: flex;
+  justify-content: space-between;
+  max-width: $desktop;
+  margin: 0 auto;
+}
